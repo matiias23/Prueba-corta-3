@@ -29,4 +29,8 @@ export class MemberService {
   getMembers(): Observable<Member[]> {
     return this.http.get<Member[]>(this.baseUrl + '/member');
   }
+
+  editMember(id:number): Observable<Object>{
+    return this.http.put(this.baseUrl + '/member',id )
+  }
 }
